@@ -1,8 +1,11 @@
 "use client"
 
+import { useRouter } from 'next/navigation'
 import { useState } from "react"
 
 export default function Login(){
+  const router = useRouter()
+
   const [loginData, setLoginData] = useState({
     email: "",
     senha: ""
@@ -24,19 +27,17 @@ export default function Login(){
   }
 
   const entrar = ()=>{
-    if(loginData.email === "" || loginData.senha ===""){
+    if (loginData.email === "" || loginData.senha === "") {
       alert("Usuário ou senha inválidos")
       return
     }
-    else{
-      alert("Login efetuado com sucesso!")
-      console.log(loginData)
-    }
+
+    router.push("/order")
   }
 
   return(
-    <div className="bg-gray-300 w-screen h-screen flex items-center justify-center">
-      <div className="w-[30vw] bg-black flex flex-col">
+    <div className="bg-pink-100 w-screen h-screen flex items-center justify-center">
+      <div className="w-[30vw] bg-white flex flex-col p-3 rounded-xl">
           <label>
             Email
           </label>
@@ -44,8 +45,12 @@ export default function Login(){
           value={loginData.email}
           onChange={(evento)=>{atualizaInput(evento, "email")}}
           type="text"
-          placeholder="email@myemail.com"
+          placeholder=" quero100@porfavor.com.br"
           />
+
+        <br>
+        </br>
+
           <label>
             Senha
           </label>
@@ -53,14 +58,17 @@ export default function Login(){
           value={loginData.senha}
           onChange={(evento)=>{atualizaInput(evento, "senha")}}
           type="password"
-          placeholder="********"
+          placeholder=" *************"
           />
+
+        <br>
+        </br>
 
           <input
           type="submit"
           onClick={entrar}
-          value="Entrar"
-          className="bg-green-700 hover:bg-green-500"
+          value="Login"
+          className="bg-pink-700 hover:bg-pink-500 rounded-xl"
           />
 
       </div>

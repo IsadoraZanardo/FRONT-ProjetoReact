@@ -21,11 +21,11 @@ export default function Sidebar(){
      const router = useRouter ()
 
      return(
-          <div className="w-[20vw] h-screen bg-pink-700 flex flex-col items-center justify-around">
+          <div className="w-[16vw] bg-pink-500 flex flex-col items-center justify-around">
                <div className="flex flex-col gap-2">
                     <Image
                     src={linkImagem}
-                    alt="Logo não disponível"
+                    alt="Logo não disponível :("
                     width={100}
                     height={100}
                     />
@@ -34,7 +34,7 @@ export default function Sidebar(){
                <div className="flex flex-col gap-2">
                     <span 
                     onClick={() => { window.location.href = "https://www.ifood.com.br/" }}
-                    className="flex gap-2 px-2 hover:bg-pink-100 rounded-xl p-2 w-full cursor-pointer justify-start bg-pink-500">
+                    className="flex gap-2 px-2 hover:bg-pink-200 rounded-xl p-2 w-full cursor-pointer justify-start bg-pink-500">
                          <Lollipop 
                          size={estilosdoincone.size} 
                          color={estilosdoincone.color}
@@ -43,8 +43,8 @@ export default function Sidebar(){
                     </span>
 
                     <span
-                    onClick={()=>{router.push('/login')}}
-                    className="flex gap-2 px-2 hover:bg-pink-100 rounded-xl p-2 w-full cursor-pointer justify-start bg-pink-500">
+                    onClick={()=>{router.push('http://localhost:3000')}}
+                    className="flex gap-2 px-2 hover:bg-pink-200 rounded-xl p-2 w-full cursor-pointer justify-start bg-pink-500">
                          <LogOut
                          size={estilosdoincone.size} 
                          color={estilosdoincone.color}
