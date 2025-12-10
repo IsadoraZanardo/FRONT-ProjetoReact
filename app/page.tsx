@@ -46,6 +46,7 @@ export default function Login(){
           onChange={(evento)=>{atualizaInput(evento, "email")}}
           type="text"
           placeholder=" quero100@porfavor.com.br"
+          className="border-b-2 border-black outline-none focus:border-pink-700"
           />
 
         <br>
@@ -59,6 +60,7 @@ export default function Login(){
           onChange={(evento)=>{atualizaInput(evento, "senha")}}
           type="password"
           placeholder=" *************"
+          className="border-b-2 border-black outline-none focus:border-pink-700"
           />
 
         <br>
